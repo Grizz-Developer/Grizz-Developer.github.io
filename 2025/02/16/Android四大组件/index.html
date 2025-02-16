@@ -1,0 +1,466 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Android四大组件 | 熊就该有个熊样_R</title><meta name="author" content="熊就该有个熊样_R"><meta name="copyright" content="熊就该有个熊样_R"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Android四大组件"><meta name="application-name" content="Android四大组件"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Android四大组件"><meta property="og:url" content="http://example.com/2025/02/16/Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6/index.html"><meta property="og:site_name" content="熊就该有个熊样_R"><meta property="og:description" content="Android 的四大组件指：Activity Service Broadcast ContentProvider Android四大组件Activity生命周期生命周期：onCreate() -&amp;gt; onStart() - &amp;gt; onResume() -&amp;gt; onPause() -&amp;amp;g"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="http://example.com/img/touxiang.png"><meta property="article:author" content="熊就该有个熊样_R"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://example.com/img/touxiang.png"><meta name="description" content="Android 的四大组件指：Activity Service Broadcast ContentProvider Android四大组件Activity生命周期生命周期：onCreate() -&amp;gt; onStart() - &amp;gt; onResume() -&amp;gt; onPause() -&amp;amp;g"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2025/02/16/Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 熊就该有个熊样_R","link":"链接: ","source":"来源: 熊就该有个熊样_R","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '熊就该有个熊样_R',
+  title: 'Android四大组件',
+  postAI: '',
+  pageFillDescription: 'Android四大组件, Activity, 生命周期, onCreate, onStart, onResume, onPause, onStop, 特殊情况, Activity的启动模式, Activity 与 Fragment的四大组件指四大组件生命周期生命周期当跳转到新活动时的生命周期为当锁屏或跳转到新活动时会调用方法从锁屏或者其他活动返回时会调用方法再次进入运行状态当退到后台但不退出时会调用方法再次回到时会调用在该方法中您将执行基本应用程序启动逻辑该逻辑应该在活动的整个生命周期中仅发生一次例如您的实现可能会将数据绑定到列表将活动与关联并实例化一些类范围变量此方法接收参数该参数是包含活动先前保存状态的对象如果活动以前从未存在过则对象的值为当活动进入状态时系统将调用此回调该调用使活动对用户可见因为应用程序准备活动以进入前台并变为交互式例如此方法是应用程序初始化维护的代码的位置活动进入状态时它进入前台然后系统调用回调这是应用程序与用户交互的状态该应用程序保持这种状态直到某些事情成为焦点远离应用程序例如这样的事件可能是接收电话用户导航到另一个活动或者设备屏幕关闭系统将此方法称为用户离开您的活动的第一个指示尽管并不总是意味着活动正在被销毁它表示活动不再在前台尽管如果用户处于多窗口模式它仍然可见使用该方法暂停或调整在处于暂停状态时不应继续或应继续适度的操作并且您希望很快恢复当您的活动不再对用户可见时它已进入状态系统将调用回调例如当新启动的活动覆盖整个屏幕时可能会发生这种情况系统也可以在活动完成运行时调用并且即将终止特殊情况一当屏幕发生旋转时当前的会被销毁重新创建一个新的活动生命周期为暂停通常在这里保存一些临时数据停止动画等停止变得不可见在这里可以释放一些不再需要的资源被销毁在这里释放所有资源取消注册监听器等重新创建新的实例被创建参数可能包含之前保存的状态信息如果之前调用了方法变得可见恢复重新获得焦点可以与用户交互注意在销毁前会调用方法将之前的数据对象等等通通保存下来但是控件上的信息不会被保留二优先级如果内存不足会把优先级低的活动掉优先级高到低正在运行的活动在后台不可见的活动执行过的活动的启动模式的启动模式定义了当用户启动一个新的时系统如何处理的实例它们定义在文件中通过标签的属性指定提供了四种启动模式默认模式每次启动都会创建一个新的实例并将其压入任务栈的顶部多个实例可以存在于同一个任务栈中可以通过启动应用场景大多数情况下都适用适用于需要多个实例的场景比如浏览网页查看多个联系人等如果目标已经位于任务栈的栈顶则不会创建新的实例而是会调用现有实例的方法并将新的传递给它如果目标不在栈顶则会创建一个新的实例并将其压入栈顶应用场景适用于接收推送消息的避免重复创建实例比如消息通知栏点击跳转的系统创建一个新的任务栈并将的实例放入该任务栈中如果指定的已经存在则直接使用该的栈如果系统中已经存在该的实例并且位于某个任务栈中则系统会将该任务栈移动到前台并调用现有实例的方法不会创建新的实例如果启动时任务栈中有其他的这些会被销毁注意这取决于具体的实现行为可能有些不同应用场景适用于应用的主确保只有一个实例存在避免用户多次启动应用例如与类似系统创建一个新的任务栈并将的实例放入该任务栈中但与不同的是这个任务栈中只能有这一个实例任何其他的都不会被放入这个任务栈当其他从这个启动时它们会被放入其他的任务栈中应用场景适用于需要与其他应用共享的例如拨打电话的可以确保该独立于其他应用的任务栈启动模式实例数量位置行为应用场景多个栈顶每次启动都创建新实例浏览网页查看多个联系人等多个栈顶只有一个栈顶如果栈顶是该则调用否则创建新实例接收推送消息的一个任务栈根如果已存在实例则将任务栈移动到前台调用否则创建新实例并创建新的任务栈确保只有一个实例如果启动时栈中有其他可能会被销毁取决于具体实现应用的主一个独立任务栈创建新的任务栈只有这一个实例与其他应用共享确保该独立于其他应用的任务栈拨打电话的与定义代表一个单独的屏幕是用户可以交互的独立组件可以理解为应用的一个窗口生命周期拥有完整的生命周期包括负责整个屏幕的显示和用户交互独立性可以独立运行有自己的任务栈依赖性不依赖于其他组件是顶层组件使用场景应用程序中的每个屏幕通常对应一个定义是的一部分代表界面中的一部分可以理解为的一个模块化部分生命周期的生命周期依赖于宿主拥有自己的生命周期回调但其状态会受到宿主的影响生命周期方法包括负责界面的一部分显示和用户交互独立性不能独立运行必须依附于依赖性依赖于是的子组件使用场景将一个的分解为多个可重用的模块可以在不同的之间共享例如在平板电脑上可以在一个中同时显示列表和详细信息在手机上可以在不同的中显示它们特性本质独立屏幕的一部分生命周期完整的生命周期依赖于宿主的生命周期负责整个屏幕的负责界面的一部分独立性可以独立运行必须依附于可重用性较低较高可以在多个之间重用任务栈有自己的任务栈没有自己的任务栈依附于宿主的任务栈内存占用通常比消耗更多的资源比消耗更少的资源主要用途构建应用程序的各个屏幕将的分解为模块化组件提高代码可重用性适应不同屏幕尺寸的设备创建销毁',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-02-16 14:41:09',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">熊就该有个熊样_R</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/wechatpay.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src="/img/wechatpay.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="/img/alipay.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">Android四大组件</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-02-16T05:41:42.000Z" title="发表于 2025-02-16 13:41:42">2025-02-16</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-02-16T06:41:09.120Z" title="更新于 2025-02-16 14:41:09">2025-02-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为南宁"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>南宁</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2025/02/16/Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6/"><header><h1 id="CrawlerTitle" itemprop="name headline">Android四大组件</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">熊就该有个熊样_R</span><time itemprop="dateCreated datePublished" datetime="2025-02-16T05:41:42.000Z" title="发表于 2025-02-16 13:41:42">2025-02-16</time><time itemprop="dateCreated datePublished" datetime="2025-02-16T06:41:09.120Z" title="更新于 2025-02-16 14:41:09">2025-02-16</time></header><p>Android 的四大组件指：Activity Service Broadcast ContentProvider<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bef75a15afced36877e72d1c247b2fd5.png" alt="图片" title="安卓四大组件"></p>
+<h2 id="Android四大组件"><a href="#Android四大组件" class="headerlink" title="Android四大组件"></a>Android四大组件</h2><h3 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h3><h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>生命周期：onCreate() -&gt; onStart() - &gt; onResume() -&gt; onPause() -&gt; onStop() -&gt; onDestroy()</p>
+<p>当跳转到新活动时，Activity的生命周期为onCreate() -&gt; onStart() - &gt; onResume()</p>
+<p>当锁屏或跳转到新活动时，Activity会调用onPause()方法，从锁屏或者其他活动返回时，Activity会调用onResume()方法，再次进入运行状态</p>
+<p>当APP退到后台，但不退出时，Activity会调用onPause() -&gt; onStop()方法，再次回到APP时会调用onRestart -&gt; onStart() - &gt; onResume()</p>
+<h4 id="onCreate"><a href="#onCreate" class="headerlink" title="onCreate"></a>onCreate</h4><p>在该onCreate() 方法中，您将执行基本应用程序启动逻辑，该逻辑应该在活动的整个生命周期中仅发生一次。例如，您的实现可能会将数据绑定到列表，将活动与a关联 ，并实例化一些类范围变量。此方法接收参数，该参数是 包含活动先前保存状态的对象。如果活动以前从未存在过，则对象的值为null。</p>
+<h4 id="onStart"><a href="#onStart" class="headerlink" title="onStart"></a>onStart</h4><p>当活动进入Started状态时，系统将调用此回调。该onStart()调用使活动对用户可见，因为应用程序准备活动以进入前台并变为交互式。例如，此方法是应用程序初始化维护UI的代码的位置。</p>
+<h4 id="onResume"><a href="#onResume" class="headerlink" title="onResume"></a>onResume</h4><p>活动进入Resumed状态时，它进入前台，然后系统调用onResume() 回调。这是应用程序与用户交互的状态。该应用程序保持这种状态，直到某些事情成为焦点远离应用程序。例如，这样的事件可能是接收电话，用户导航到另一个活动，或者设备屏幕关闭。</p>
+<h4 id="onPause"><a href="#onPause" class="headerlink" title="onPause"></a>onPause</h4><p>系统将此方法称为用户离开您的活动的第一个指示（尽管并不总是意味着活动正在被销毁）; 它表示活动不再在前台（尽管如果用户处于多窗口模式，它仍然可见）。使用该onPause()方法暂停或调整Activity在处于暂停状态时不应继续（或应继续适度）的操作，并且您希望很快恢复。</p>
+<h4 id="onStop"><a href="#onStop" class="headerlink" title="onStop"></a>onStop</h4><p>当您的活动不再对用户可见时，它已进入 Stopped状态，系统将调用 onStop()回调。例如，当新启动的活动覆盖整个屏幕时，可能会发生这种情况。系统也可以onStop() 在活动完成运行时调用，并且即将终止。</p>
+<h4 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h4><p>一、当屏幕发生旋转时，当前的 Activity 会被销毁，重新创建一个新的活动<br>生命周期为：<br>onPause(): Activity 暂停。通常在这里保存一些临时数据，停止动画等。<br>onStop(): Activity 停止，变得不可见。在这里可以释放一些不再需要的资源。<br>onDestroy(): Activity 被销毁。在这里释放所有资源，取消注册监听器等。<br>Activity 重新创建:<br>onCreate(Bundle savedInstanceState): 新的 Activity 实例被创建。savedInstanceState 参数可能包含之前保存的状态信息，如果之前调用了 onSaveInstanceState() 方法。<br>onStart(): Activity 变得可见。<br>onResume(): Activity 恢复，重新获得焦点，可以与用户交互。</p>
+<p>注意：在 activity 销毁前，会调用 onRestoreInstanceState 方法，将之前的数据（对象等等）通通保存下来，但是控件上的信息不会被保留。</p>
+<p>二、优先级，如果内存不足，会把优先级低的活动 stop 掉<br>优先级–高到低</p>
+<p>正在运行的活动，<br>在后台不可见的活动，<br>执行过stop的活动</p>
+<h4 id="Activity的启动模式"><a href="#Activity的启动模式" class="headerlink" title="Activity的启动模式"></a>Activity的启动模式</h4><p>Activity 的启动模式 (Launch Mode) 定义了当用户启动一个新的 Activity 时，系统如何处理 Activity 的实例。 它们定义在 AndroidManifest.xml 文件中，通过 <activity> 标签的 android:launchMode 属性指定。</p>
+<p>Android 提供了四种启动模式：</p>
+<p>standard (默认模式):</p>
+<p>每次启动 Activity，都会创建一个新的实例，并将其压入任务栈的顶部。<br>多个实例可以存在于同一个任务栈中。<br>可以通过 new Intent(context, MyActivity.class) 启动。<br>应用场景: 大多数情况下都适用，适用于需要多个实例的场景，比如浏览网页、查看多个联系人等。</p>
+<p>singleTop:</p>
+<p>如果目标 Activity 已经位于任务栈的栈顶，则不会创建新的实例，而是会调用现有实例的 onNewIntent() 方法，并将新的 Intent 传递给它。<br>如果目标 Activity 不在栈顶，则会创建一个新的实例，并将其压入栈顶。<br>应用场景: 适用于接收推送消息的 Activity，避免重复创建实例。比如消息通知栏点击跳转的 Activity。</p>
+<p>singleTask:</p>
+<p>系统创建一个新的任务栈 (Task)，并将 Activity 的实例放入该任务栈中。 (如果指定的 taskAffinity 已经存在，则直接使用该 taskAffinity 的栈)<br>如果系统中已经存在该 Activity 的实例，并且位于某个任务栈中，则系统会将该任务栈移动到前台，并调用现有实例的 onNewIntent() 方法。 不会创建新的实例。<br>如果启动 singleTask Activity 时，任务栈中有其他的 Activity，这些 Activity 会被销毁。 （注意，这取决于具体的实现，行为可能有些不同。）<br>应用场景: 适用于应用的主 Activity，确保只有一个实例存在，避免用户多次启动应用。 例如，Launcher Activity。</p>
+<p>singleInstance:</p>
+<p>与 singleTask 类似，系统创建一个新的任务栈，并将 Activity 的实例放入该任务栈中。<br>但与 singleTask 不同的是，这个任务栈中只能有这一个 Activity 实例。 任何其他的 Activity 都不会被放入这个任务栈。<br>当其他 Activity 从这个 Activity 启动时，它们会被放入其他的任务栈中。<br>应用场景: 适用于需要与其他应用共享的 Activity，例如拨打电话的 Activity。 可以确保该 Activity 独立于其他应用的任务栈。</p>
+<table>
+<thead>
+<tr>
+<th>启动模式</th>
+<th>实例数量</th>
+<th>位置</th>
+<th>行为</th>
+<th>应用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>standard</code></td>
+<td>多个</td>
+<td>栈顶</td>
+<td>每次启动都创建新实例。</td>
+<td>浏览网页，查看多个联系人等。</td>
+</tr>
+<tr>
+<td><code>singleTop</code></td>
+<td>多个，栈顶只有一个</td>
+<td>栈顶</td>
+<td>如果栈顶是该 Activity，则调用 <code>onNewIntent()</code>，否则创建新实例。</td>
+<td>接收推送消息的 Activity。</td>
+</tr>
+<tr>
+<td><code>singleTask</code></td>
+<td>一个</td>
+<td>任务栈根</td>
+<td>如果已存在实例，则将任务栈移动到前台，调用 <code>onNewIntent()</code>，否则创建新实例，并创建新的任务栈。  确保只有一个实例，如果启动时栈中有其他Activity，可能会被销毁（取决于具体实现）</td>
+<td>应用的主 Activity (Launcher)。</td>
+</tr>
+<tr>
+<td><code>singleInstance</code></td>
+<td>一个</td>
+<td>独立任务栈</td>
+<td>创建新的任务栈，只有这一个 Activity 实例。  与其他应用共享，确保该 Activity 独立于其他应用的任务栈。</td>
+<td>拨打电话的 Activity。</td>
+</tr>
+</tbody></table>
+<h4 id="Activity-与-Fragment"><a href="#Activity-与-Fragment" class="headerlink" title="Activity 与 Fragment"></a>Activity 与 Fragment</h4><p>Activity</p>
+<p>定义: Activity 代表一个单独的屏幕，是用户可以交互的独立组件。 可以理解为应用的一个窗口。<br>生命周期: 拥有完整的生命周期，包括 onCreate(), onStart(), onResume(), onPause(), onStop(), onDestroy()。<br>UI: 负责整个屏幕的 UI 显示和用户交互。<br>独立性: 可以独立运行，有自己的任务栈。<br>依赖性: 不依赖于其他组件，是顶层组件。<br>使用场景: 应用程序中的每个屏幕通常对应一个 Activity。<br>Fragment</p>
+<p>定义: Fragment 是 Activity 的一部分，代表 Activity 界面中的一部分 UI。 可以理解为 Activity 的一个模块化部分。<br>生命周期: Fragment 的生命周期依赖于宿主 Activity，拥有自己的生命周期回调，但其状态会受到宿主 Activity 的影响。 生命周期方法包括 onAttach(), onCreate(), onCreateView(), onActivityCreated(), onStart(), onResume(), onPause(), onStop(), onDestroyView(), onDestroy(), onDetach()。<br>UI: 负责 Activity 界面的一部分 UI 显示和用户交互。<br>独立性: 不能独立运行，必须依附于 Activity。<br>依赖性: 依赖于 Activity，是 Activity 的子组件。<br>使用场景: 将一个 Activity 的 UI 分解为多个可重用的模块，可以在不同的 Activity 之间共享。 例如，在平板电脑上，可以在一个 Activity 中同时显示列表和详细信息；在手机上，可以在不同的 Activity 中显示它们。</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Activity</th>
+<th>Fragment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>本质</strong></td>
+<td>独立屏幕</td>
+<td>Activity 的一部分</td>
+</tr>
+<tr>
+<td><strong>生命周期</strong></td>
+<td>完整的生命周期</td>
+<td>依赖于宿主 Activity 的生命周期</td>
+</tr>
+<tr>
+<td><strong>UI</strong></td>
+<td>负责整个屏幕的 UI</td>
+<td>负责 Activity 界面的一部分 UI</td>
+</tr>
+<tr>
+<td><strong>独立性</strong></td>
+<td>可以独立运行</td>
+<td>必须依附于 Activity</td>
+</tr>
+<tr>
+<td><strong>可重用性</strong></td>
+<td>较低</td>
+<td>较高，可以在多个 Activity 之间重用</td>
+</tr>
+<tr>
+<td><strong>任务栈</strong></td>
+<td>有自己的任务栈</td>
+<td>没有自己的任务栈，依附于宿主 Activity 的任务栈</td>
+</tr>
+<tr>
+<td><strong>内存占用</strong></td>
+<td>通常比 Fragment 消耗更多的资源</td>
+<td>比 Activity 消耗更少的资源</td>
+</tr>
+<tr>
+<td><strong>主要用途</strong></td>
+<td>构建应用程序的各个屏幕</td>
+<td>将 Activity 的 UI 分解为模块化组件，提高代码可重用性，适应不同屏幕尺寸的设备</td>
+</tr>
+</tbody></table>
+<p>创建：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/2025-2-16-14-00/20250216143757.png" alt="图片" title="创建"></p>
+<p>销毁：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/2025-2-16-14-00/20250216143956.png" alt="图片" title="销毁"></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/touxiang.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/touxiang.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">熊就该有个熊样_R</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2025/02/16/Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2025/02/16/Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6/')">Android四大组件</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/wechatpay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/wechatpay.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2025/02/16/Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Android四大组件&amp;url=http://example.com/2025/02/16/Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">熊就该有个熊样_R</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="/img/touxiang.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/06/07/Android%20Studio%E9%85%8D%E7%BD%AEGradle%E5%9B%BD%E5%86%85%E9%98%BF%E9%87%8C%E5%BC%80%E6%BA%90%E9%95%9C%E5%83%8F%E7%AB%99/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Android Studio配置Gradle国内阿里开源镜像站</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/touxiang.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">Android四大组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Activity"><span class="toc-number">1.1.</span> <span class="toc-text">Activity</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.1.1.</span> <span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onCreate"><span class="toc-number">1.1.2.</span> <span class="toc-text">onCreate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onStart"><span class="toc-number">1.1.3.</span> <span class="toc-text">onStart</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onResume"><span class="toc-number">1.1.4.</span> <span class="toc-text">onResume</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onPause"><span class="toc-number">1.1.5.</span> <span class="toc-text">onPause</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#onStop"><span class="toc-number">1.1.6.</span> <span class="toc-text">onStop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="toc-number">1.1.7.</span> <span class="toc-text">特殊情况</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity%E7%9A%84%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.8.</span> <span class="toc-text">Activity的启动模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity-%E4%B8%8E-Fragment"><span class="toc-number">1.1.9.</span> <span class="toc-text">Activity 与 Fragment</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/16/Android%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6/" title="Android四大组件">Android四大组件</a><time datetime="2025-02-16T05:41:42.000Z" title="发表于 2025-02-16 13:41:42">2025-02-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/07/Android%20Studio%E9%85%8D%E7%BD%AEGradle%E5%9B%BD%E5%86%85%E9%98%BF%E9%87%8C%E5%BC%80%E6%BA%90%E9%95%9C%E5%83%8F%E7%AB%99/" title="Android Studio配置Gradle国内阿里开源镜像站">Android Studio配置Gradle国内阿里开源镜像站</a><time datetime="2024-06-06T16:11:33.000Z" title="发表于 2024-06-07 00:11:33">2024-06-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/20/2%E5%88%86%E9%92%9F%E8%A7%A3%E5%86%B3Android%20Studio%E4%B8%8B%E8%BD%BDgradle%E5%8D%A1%E9%A1%BF/" title="2分钟解决Android Studio下载gradle卡顿">2分钟解决Android Studio下载gradle卡顿</a><time datetime="2024-05-20T15:39:22.000Z" title="发表于 2024-05-20 23:39:22">2024-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/16/%E5%A6%82%E4%BD%95%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="如何用Hexo搭建个人博客?">如何用Hexo搭建个人博客?</a><time datetime="2024-05-16T14:38:35.000Z" title="发表于 2024-05-16 22:38:35">2024-05-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/10/hello-world/" title="Hello World">Hello World</a><time datetime="2024-05-10T05:39:22.000Z" title="发表于 2024-05-10 13:39:22">2024-05-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="熊就该有个熊样_R" target="_blank">熊就该有个熊样_R</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("01/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 熊就该有个熊样_R 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
